@@ -2,4 +2,6 @@
  * This script is executed on each page
  */
 
-console.info('epic_screenshot: Page has been opened')
+import { logger } from "./common"
+
+logger.info('Page has been opened')
