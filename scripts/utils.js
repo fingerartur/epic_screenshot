@@ -1,5 +1,6 @@
-const chalk = require('chalk')
 const fs = require('fs')
+
+const chalk = require('chalk')
 
 const log = {
   info: message => console.info(chalk.yellowBright(message)),
@@ -36,6 +37,16 @@ const clearDirectory = (directory) => {
 }
 
 /**
+ * Copy one files
+ *
+ * @param {string} source - source path
+ * @param {string} target - destination path
+ */
+const copyFile = (source, target) => {
+  fs.copyFileSync(source, target)
+}
+
+/**
  * Copy all files from one directory to another
  *
  * @param {string} sourceDirectory - source directory path
@@ -45,13 +56,14 @@ const copyFiles = (sourceDirectory, destinationDirectory) => {
   const assetFilenames = fs.readdirSync(sourceDirectory)
 
   assetFilenames.forEach(filename => {
-    fs.copyFileSync(`${sourceDirectory}/${filename}`, `${destinationDirectory}/${filename}`)
+    copyFile(`${sourceDirectory}/${filename}`, `${destinationDirectory}/${filename}`)
   })
 }
 
 module.exports = {
   assertMinNodeVersion,
   clearDirectory,
+  copyFile,
   copyFiles,
   log,
 }

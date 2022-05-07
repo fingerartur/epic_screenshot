@@ -1,0 +1,26 @@
+@keyframes epic_screenshot_fade_out {
+  from {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(0.5) translateY(200px);
+    opacity: 0;
+  }
+}
+
+.epic_screenshot_preview {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10000;
+  height: 100px;
+  width: auto;
+
+  animation-name: epic_screenshot_fade_out;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  filter: drop-shadow(0 0 0.75rem grey);
+}

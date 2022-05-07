@@ -1,6 +1,7 @@
 const childProcess = require('child_process')
 const fs = require('fs')
-const { assertMinNodeVersion, clearDirectory, copyFiles, log } = require('./utils.js')
+
+const { assertMinNodeVersion, clearDirectory, copyFiles, log, copyFile } = require('./utils.js')
 
 assertMinNodeVersion(16)
 
@@ -10,7 +11,8 @@ const DIRS = {
 }
 
 const FILES = {
-  MANIFEST: 'manifest.json'
+  MANIFEST: 'manifest.json',
+  STYLES: 'styles.css',
 }
 
 
@@ -27,6 +29,18 @@ try {
   childProcess.execSync('npx webpack', { stdio: 'inherit' })
 } catch (error) {
   log.error('Failed to build sources')
+  throw error
+}
+
+try {
+  const source = `src/${FILES.STYLES}`
+  const target = `${DIRS.DIST}/${FILES.STYLES}`
+
+  log.info(`Copying styles from ${source} to ${target}...`)
+
+  copyFile(source, target)
+} catch (error) {
+  log.error('Failed to copy styles')
   throw error
 }
 

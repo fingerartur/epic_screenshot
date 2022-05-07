@@ -20,6 +20,9 @@
       ],
       "js": [
         "content_script.min.js"
+      ],
+      "css": [
+        "styles.css"
       ]
     }
   ],
