@@ -6,6 +6,7 @@
     "author": "Artur Finger <fingerartur@gmail.com>",
     "license": "MIT",
     "private": true,
+    "main": "manifest.json",
     "scripts": {
         "build": "node ./scripts/build.js"
     },

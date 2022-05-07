@@ -4,8 +4,23 @@ const { assertMinNodeVersion, clearDirectory, copyFiles, log } = require('./util
 
 assertMinNodeVersion(16)
 
-const DIST_DIR = './dist'
-const MANIFEST_FILE = 'manifest.json'
+const DIRS = {
+  ASSETS: './assets',
+  DIST: './dist',
+}
+
+const FILES = {
+  MANIFEST: 'manifest.json'
+}
+
+
+try {
+  log.info(`Cleaning ${DIRS.DIST}...`)
+  clearDirectory(DIRS.DIST)
+} catch (error) {
+  log.error(`Failed to clean ${DIRS.DIST}`)
+  throw error
+}
 
 try {
   log.info('Building sources...')
@@ -16,12 +31,23 @@ try {
 }
 
 try {
-  log.info('Copying manifest.json...')
-  fs.copyFileSync(`./src/${MANIFEST_FILE}`, `${DIST_DIR}/${MANIFEST_FILE}`)
+  log.info(`Copying assets from ${DIRS.ASSETS} to ${DIRS.DIST}...`)
+
+  copyFiles(DIRS.ASSETS, DIRS.DIST)
 } catch (error) {
-  log.error(`Failed to copy ${MANIFEST_FILE}`)
+  log.error('Failed to copy assets')
   throw error
 }
 
+try {
+  log.info(`Copying ${FILES.MANIFEST} to ${DIRS.DIST}...`)
+
+  fs.copyFileSync(FILES.MANIFEST, `${DIRS.DIST}/${FILES.MANIFEST}`)
+} catch (error) {
+  log.error('Failed to copy manifest')
+  throw error
+}
+
+
 log.success('Success!')
-log.success(`All files of the chrome extension are located in ${DIST_DIR}`)
+log.success(`All files of the chrome extension are located in ${DIRS.DIST}`)

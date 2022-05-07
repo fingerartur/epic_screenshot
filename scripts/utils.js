@@ -1,4 +1,5 @@
 const chalk = require('chalk')
+const fs = require('fs')
 
 const log = {
   info: message => console.info(chalk.yellowBright(message)),
