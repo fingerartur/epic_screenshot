@@ -1,0 +1,26 @@
+{
+  "name": "Epic Screenshot",
+  "action": {
+    "default_title": "Click to take a screenshot of video"
+  },
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Takes a screenshot of video element",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background_script.min.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content_script.min.js"
+      ]
+    }
+  ]
+}
