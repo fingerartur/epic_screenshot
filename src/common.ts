@@ -1,6 +1,6 @@
 const getChromeVersion = () => {
   // e.g. 91.0.4472.77
-  const versionString = navigator.appVersion.match(/.*Chrome\/([0-9\.]+)/)?.[1]
+  const versionString = navigator.appVersion.match(/.*Chrome\/([0-9.]+)/)?.[1]
 
   if (versionString) {
     const [major, minor] = versionString.split('.')
@@ -22,15 +22,15 @@ const getChromeVersion = () => {
 const LOGGER_PREFIX = 'epic_screenshot'
 
 const logger = {
-  info: (...args: any[]) => {
+  info: (...args: unknown[]) => {
     console.info(LOGGER_PREFIX, ...args)
   },
-  warn: (...args: any[]) => {
+  warn: (...args: unknown[]) => {
     console.warn(LOGGER_PREFIX, ...args)
   },
-  error: (...args: any[]) => {
+  error: (...args: unknown[]) => {
     console.error(LOGGER_PREFIX, ...args)
-  }
+  },
 }
 
 export { getChromeVersion, logger }
