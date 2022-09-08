@@ -13,6 +13,7 @@ const DIRS = {
 const FILES = {
   MANIFEST: 'manifest.json',
   STYLES: 'styles.css',
+  POPUP: 'popup.html',
 }
 
 
@@ -33,14 +34,18 @@ try {
 }
 
 try {
-  const source = `src/${FILES.STYLES}`
-  const target = `${DIRS.DIST}/${FILES.STYLES}`
+  const ROOT_FILES = [FILES.POPUP, FILES.STYLES]
 
-  log.info(`Copying styles from ${source} to ${target}...`)
+  ROOT_FILES.forEach(file => {
+    const source = `src/${file}`
+    const target = `${DIRS.DIST}/${file}`
 
-  copyFile(source, target)
+    log.info(`Copying ${source} to ${target}...`)
+
+    copyFile(source, target)
+  })
 } catch (error) {
-  log.error('Failed to copy styles')
+  log.error('Failed to copy root files (CSS, HTML)')
   throw error
 }
 
