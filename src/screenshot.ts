@@ -96,16 +96,22 @@ const showPreview = (canvas: HTMLCanvasElement) => {
 }
 
 const takeScreenshot = () => {
-  logger.info('Taking screenshot...')
+  try {
+    logger.info('Taking screenshot...')
 
-  const videoElement = findVideoElement()
-  const canvas = drawCurrentVideoFrameOnCanvas(videoElement)
+    const videoElement = findVideoElement()
+    const canvas = drawCurrentVideoFrameOnCanvas(videoElement)
 
-  downloadImage(canvas, 'Screenshot.png')
+    downloadImage(canvas, 'Screenshot.png')
 
-  logger.info('Screenshot saved successfully')
+    logger.info('Screenshot saved successfully')
 
-  showPreview(canvas)
+    showPreview(canvas)
+  } catch (error) {
+    alert('Epic screenshot failed to take a screenshot.')
+
+    logger.error(error)
+  }
 }
 
 export { takeScreenshot }
