@@ -86,7 +86,9 @@ const showPreview = (canvas: HTMLCanvasElement) => {
   const resolution = `${width}x${height}`
 
   canvas.className = 'epic_screenshot_preview'
-  document.body.appendChild(canvas)
+
+  const parent = document.fullscreenElement ?? document.body
+  parent.appendChild(canvas)
 
   setTimeout(function () {
     document.body.removeChild(canvas)
