@@ -2,13 +2,19 @@
 
 Epic screenshot is a Chrome extension for taking screenshots of video on any site.
 
+**This extension is deprecated, I recommend using [Video Screenshot extension](https://chrome.google.com/webstore/detail/video-screenshot/ppkojackhibeogijphhfnamhemklmial) which is better.**
+
 ## Details
 
 Press `Ctrl+Shift+S` or `Cmd+Shift+S` or `Alt+Shift+S` to take the screenshot.
 
 On some sites, these combos may not work, instead you can use `Ctrl+Shift+.` or `Cmd+Shift+.` or `Alt+Shift+.` or `Ctrl+Shift+,` or `Cmd+Shift+,` or `Alt+Shift+,`.
 
-Details: if multiple videos are playing on the page, the one with the largest width and height (actually with x height) will be screenshotted.
+Works in full-screen. Quality of the screenshot is the same as of the video.
+If multiple videos are playing on the page, the one with the largest width and height (actually with x height) will be screenshotted.
+
+Known issues:
+It may not work on some sites such as Netflix.com or Tiktok.com due to security reasons.
 
 
 ## Setup
