@@ -28,10 +28,14 @@ npm run build
 ```
 Chrome > Extensions > Load unpacked
 
+Read about [developing extensions](https://developer.chrome.com/docs/extensions/mv3/getstarted/).
+
 ## Publish
 ```
 npm run pack
 ```
+
+Read about [publishing extensions](https://developer.chrome.com/docs/webstore/publish/).
 
 ## Related works
 
