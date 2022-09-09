@@ -55,5 +55,6 @@ const configContent = merge(common, {
   },
 })
 
-
-module.exports = [configScript, configContent]
+module.exports = [configContent]
+// Uncomment to add background script:
+// module.exports = [configScript, configContent]

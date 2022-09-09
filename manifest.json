@@ -19,10 +19,6 @@
       "128": "icon128.png"
     }
   },
-  "permissions": [],
-  "background": {
-    "service_worker": "background_script.min.js"
-  },
   "content_scripts": [
     {
       "matches": [
