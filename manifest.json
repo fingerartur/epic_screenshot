@@ -19,10 +19,7 @@
       "128": "icon128.png"
     }
   },
-  "permissions": [
-    "activeTab",
-    "scripting"
-  ],
+  "permissions": [],
   "background": {
     "service_worker": "background_script.min.js"
   },
