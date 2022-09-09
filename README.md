@@ -26,3 +26,21 @@ Chrome > Extensions > Load unpacked
 ```
 npm run pack
 ```
+
+## Related works
+
+Better ones:
+- https://chrome.google.com/webstore/detail/video-screenshot/ppkojackhibeogijphhfnamhemklmial Looks great, works also on netflix, has more features
+
+Worse ones:
+- https://chrome.google.com/webstore/detail/video-screenshot/cenfemgbpgfagommeifcbjcpaeefnnao (does not work in full screen)
+- https://chrome.google.com/webstore/detail/videoshot-capture-video-s/deophkhmpgfkfgaalnibkmimmcjpdbhm (no longer installable)
+- https://chrome.google.com/webstore/detail/capture-video-element/ikeochnpamfhkpmnineadmccfnaicacl (does not work in full screen, auto-uploads to Gyazo website instead of saving to disk)
+- https://chrome.google.com/webstore/detail/video-screenshot/okbncahhjihmnjpiadepoioodfnfanjk (not in english)
+- https://chrome.google.com/webstore/detail/video-screenshot/gmehbdfomfohmlajndnopdkmcnlonjmp (does not work in full screen, contains player controls)
+
+Worse, Youtube only:
+- https://chrome.google.com/webstore/detail/youtube-image-downloader/bjchdihmmgfbfheblpmfpaojmjchdioi
+- https://chrome.google.com/webstore/detail/screenshot-youtube/gjoijpfmdhbjkkgnmahganhoinjjpohk
+- https://chrome.google.com/webstore/detail/youtube-screenshot/admjdaoijfccdllogfnddnllkghmkpfb
+- https://chrome.google.com/webstore/detail/youtube-screenshot-button/ehehmcocpegbmagfhajbmeofolnpdfla
