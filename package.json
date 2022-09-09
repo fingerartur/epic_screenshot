@@ -1,6 +1,6 @@
 {
   "name": "epic_screenshot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Epic screenshot is a Chrome extension for taking screenshots of video on any site.",
   "repository": "https://github.com/fingerartur/epic_screenshot.git",
   "author": "Artur Finger <fingerartur@gmail.com>",
@@ -8,7 +8,8 @@
   "private": true,
   "main": "manifest.json",
   "scripts": {
-    "build": "node ./scripts/build.js"
+    "build": "node ./scripts/build.js",
+    "pack": "node ./scripts/build.js && node ./scripts/pack.js"
   },
   "devDependencies": {
     "@finga/eslint-config": "^1.2.0",
