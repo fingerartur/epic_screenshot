@@ -2,6 +2,8 @@
 
 Epic screenshot is a Chrome extension for taking screenshots of video on any site.
 
+Chrome web store: [link](https://chrome.google.com/webstore/detail/epic-screenshot/okpnppgjobiijpfknhoacmpmjkoobhid)
+
 **This extension is deprecated, I recommend using [Video Screenshot extension](https://chrome.google.com/webstore/detail/video-screenshot/ppkojackhibeogijphhfnamhemklmial) which is better.**
 
 ## Details
